@@ -29,7 +29,7 @@ def run(args: list[str]) -> int:
 
         if os.path.isdir(os.path.join(path, fil)):
             scripts.append(fil)
-        elif fil != "__init__.py" and fil.endswith(".py"):
+        elif fil != "__init__.pyc" and fil.endswith(".pyc"):
             scripts.append(fil[:-3])
 
     if not args:
