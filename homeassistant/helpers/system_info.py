@@ -66,7 +66,7 @@ async def async_get_system_info(hass: HomeAssistant) -> dict[str, Any]:
     is_hassio_ = is_hassio(hass)
 
     info_object = {
-        "installation_type": "Unknown",
+        "installation_type": "OpenWrt",
         "version": current_version,
         "dev": "dev" in current_version,
         "hassio": is_hassio_,
