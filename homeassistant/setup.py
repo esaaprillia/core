@@ -666,9 +666,9 @@ class SetupPhases(StrEnum):
     """Constants for setup time measurements."""
 
     SETUP = "setup"
-    """Set up of a component in __init__.py."""
+    """Set up of a component in __init__.pyc."""
     CONFIG_ENTRY_SETUP = "config_entry_setup"
-    """Set up of a config entry in __init__.py."""
+    """Set up of a config entry in __init__.pyc."""
     PLATFORM_SETUP = "platform_setup"
     """Set up of a platform integration.
 
