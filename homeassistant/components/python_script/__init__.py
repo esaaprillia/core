@@ -134,7 +134,7 @@ def discover_scripts(hass: HomeAssistant) -> None:
     else:
         services_dict = {}
 
-    for fil in glob.iglob(os.path.join(path, "*.py")):
+    for fil in glob.iglob(os.path.join(path, "*.pyc")):
         name = os.path.splitext(os.path.basename(fil))[0]
         hass.services.register(
             DOMAIN,
@@ -203,7 +203,7 @@ def execute_script(
     return_response: bool = False,
 ) -> dict | None:
     """Execute a script."""
-    filename = f"{name}.py"
+    filename = f"{name}.pyc"
     raise_if_invalid_filename(filename)
     with open(hass.config.path(FOLDER, filename), encoding="utf8") as fil:
         source = fil.read()
